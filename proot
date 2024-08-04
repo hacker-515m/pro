@@ -32,5 +32,5 @@ else
     echo ""
 fi
 sleep 2
-proot-distor login ubuntu
+proot-distro login ubuntu
 

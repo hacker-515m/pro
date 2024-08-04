@@ -1,4 +1,8 @@
 #!/bin/bash
+
+pkg install termux-tools -y
+
+termux-open-url "https://t.me/bahaa_010640/91"
 apt update -y && apt upgrade -y
 apt install git -y
 sleep 2

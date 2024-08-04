@@ -1,0 +1,27 @@
+#!/bin/bash
+apt update -y && apt upgrade -y
+apt install git -y
+sleep 2
+apt install fish -y
+sleep 2
+apt install proot-distro
+sleep 1
+proot-distro install ubuntu
+sleep 1
+
+pkg install termux-services -y
+
+pkg install cronie -y
+
+sv-enable crond
+
+if ! grep -Fxq "proot-distro login ubuntu" ~/.bashrc
+then
+    echo 'proot-distro login ubuntu' >> ~/.bashrc
+    echo ""
+else
+    echo ""
+fi
+sleep 2
+proot-distor login ubuntu
+
